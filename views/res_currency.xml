@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="tasa_cambio_inherit_base_currency_rate" model="ir.ui.view">
+            <field name="name">Campo Tasa de Cambio Banguat</field>
+            <field name="model">res.currency.rate</field>
+            <field name="inherit_id" ref="base.view_currency_rate_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='rate']" position="after">
+                    <field name="tasa_banguat" />
+                </xpath>
+
+            </field>
+        </record>
+    
+    </data>
+    
+
+</odoo>
